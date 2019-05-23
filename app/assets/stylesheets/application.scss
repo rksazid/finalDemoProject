@@ -1,0 +1,118 @@
+@import '/*';
+@import 'bootstrap';
+@import "tether";
+
+.alert-alert{
+  @extend .alert-danger;
+}
+
+.alert-notice {
+  @extend .alert-success;
+}
+
+.course-reg:hover{
+  border-radius: 30px;
+  border-color: #EFEFEF;
+  transition-duration: 500ms;
+}
+
+.nav-item {
+  border: solid 1px #FFFFFF;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.nav-item:hover{
+  border-radius: 30px;
+  transition-duration: 500ms;
+  background-color: brown;
+}
+
+#login{
+  border: solid 1px #222222;
+  width: 130px;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-color: brown;
+  color: #EFEFEF;
+  padding: 2px;
+}
+
+#edituser{
+  border: solid 1px #222222;
+  min-width: 160px;
+  max-width: 200px;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-color: brown;
+  color: #EFEFEF;
+  padding: 2px;
+}
+
+#forgotpass{
+  border: solid 1px #222222;
+  width: 300px;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-color: brown;
+  color: #EFEFEF;
+  padding: 2px;
+}
+
+#welcomemessage{
+  border: solid 1px #222222;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-color: brown;
+  color: #EFEFEF;
+  padding: 2px;
+}
+
+#courses-index{
+  border: solid 1px #222222;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-color: brown;
+  color: #EFEFEF;
+  padding: 2px;
+  width: 190px;
+  height: 80px;
+}
+
+.form-inputs{
+  max-width: 40%;
+  width: 330px;
+}
+
+.input-group-text {
+  height: 38px;
+  background: brown;
+  color: white
+}
+
+.card-body{
+  padding: 20px;
+}
+
+.container{
+  margin-top: 30px;
+}
+
+td,th{
+  padding: 5px;
+  text-align: center;
+}
+
+th{
+  background-color: #98131a;
+  color: white;
+}
+
+
+tr.list_line_odd{
+  background-color: #ffe4c4;
+}
+
+tr.list_line_even{
+  background-color: #ffdab0;
+}

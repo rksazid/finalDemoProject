@@ -8,7 +8,7 @@
   <div class="form-inputs">
     <div class="input-group mb-1">
       <div class="input-group-prepend">
-        <span class="input-group-text" style="height: 38px; background: brown; color: white">Email<sup><b>*</b></sup> &nbsp;   &nbsp;  &nbsp;</span>
+        <span class="input-group-text" >Email<sup><b>*</b></sup> &nbsp;   &nbsp;  &nbsp;</span>
       </div>
     <%= f.input :email, required: true, autofocus: true, label: false %>
     </div>
@@ -19,7 +19,7 @@
 
     <div class="input-group">
       <div class="input-group-prepend">
-        <span class="input-group-text" style="height: 38px;  background: brown; color: white">Password</span>
+        <span class="input-group-text" >Password</span>
       </div>
       <%= f.input :password,
                 required: false,
@@ -29,7 +29,7 @@
 
     <div class="input-group">
       <div class="input-group-prepend">
-        <span class="input-group-text" style="height: 38px;  background: brown; color: white">Confirm &nbsp;&nbsp;</span>
+        <span class="input-group-text">Confirm &nbsp;&nbsp;</span>
       </div>
     <%= f.input :password_confirmation,
                 required: false,
@@ -38,7 +38,7 @@
 
     <div class="input-group">
       <div class="input-group-prepend">
-        <span class="input-group-text" style="height: 38px;  background: brown; color: white">Current<sup><b>*</b></sup> &nbsp;&nbsp;</span>
+        <span class="input-group-text" >Current<sup><b>*</b></sup> &nbsp;&nbsp;</span>
       </div>
     <%= f.input :current_password,
                 hint: "Current password to confirm your access",

@@ -1,19 +1,24 @@
-<h2>Log in</h2>
+<br>
+<div id="forgotpass"><h2 class="text-center">Forgot password?</h2></div>
+<hr>
 
-<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+<%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+  <%= f.error_notification %>
+
   <div class="form-inputs">
+    <div class="input-group mb-1">
+      <div class="input-group-prepend">
+        <span class="input-group-text">Email<sup><b>*</b></sup> &nbsp;   &nbsp;  &nbsp;</span>
+      </div>
     <%= f.input :email,
-                required: false,
+                required: true,
                 autofocus: true,
-                input_html: { autocomplete: "email" } %>
-    <%= f.input :password,
-                required: false,
-                input_html: { autocomplete: "current-password" } %>
-    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+                input_html: { autocomplete: "email" } , label: false, placeholder: "example@domain.com" %>
+    </div>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Log in" %>
+    <%= f.button :submit, "Send me reset password instructions", class: "btn btn-primary mb-2" %>
   </div>
 <% end %>
 
