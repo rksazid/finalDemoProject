@@ -1,0 +1,42 @@
+<br>
+<div id="login"><h2 class="text-center">Sign up</h2></div>
+<hr>
+
+<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+      <div class="input-group mb-1">
+        <div class="input-group-prepend">
+          <span class="input-group-text" style="height: 38px; background: brown; color: white">Email<sup><b>*</b></sup> &nbsp; &nbsp;   &nbsp;  &nbsp;</span>
+        </div>
+    <%= f.input :email,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "email" }, label:false, placeholder: "example@domain.com" %>
+    </div>
+    <div class="input-group mb-1">
+      <div class="input-group-prepend">
+        <span class="input-group-text" style="height: 38px;  background: brown; color: white">Password<sup><b>*</b></sup></span>
+      </div>
+      <%= f.input :password,
+                  required: true,
+                  input_html: { autocomplete: "new-password" } , label: false, placeholder: "Minimum 6 character" %>
+    </div>
+
+    <div class="input-group mb-1">
+      <div class="input-group-prepend">
+        <span class="input-group-text" style="height: 38px;  background: brown; color: white">Confirm<sup><b>*</b></sup> &nbsp; &nbsp;&nbsp;</span>
+      </div>
+      <%= f.input :password_confirmation,
+                  required: true,
+                  input_html: { autocomplete: "new-password" },label: false, placeholder: "Re-type password" %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "Sign up", class: "btn btn-primary mb-2" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
