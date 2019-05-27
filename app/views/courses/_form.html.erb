@@ -4,13 +4,44 @@
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
   <div class="form-inputs">
-    <%= f.input :title %>
-    <%= f.input :course_id %>
-    <%= f.input :credit %>
-    <%= f.input :semester %>
+    <div class="input-group mb-1 float-left">
+      <div class="input-group-prepend">
+        <span class="input-group-text" >Course ID<sup><b>*</b></sup></span>
+      </div>
+      <%= f.input :course_id,
+                  label: false,
+                  required: true %>
+    </div>
+    <div class="input-group mb-1">
+      <div class="input-group-prepend">
+        <span class="input-group-text" >Title<sup><b>*</b></sup> &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;   &nbsp;  &nbsp;</span>
+      </div>
+      <%= f.input :title,
+                  required: true,
+                  autofocus: true,
+                  label: false %>
+    </div>
+    <div class="input-group mb-1">
+      <div class="input-group-prepend">
+        <span class="input-group-text" >Credit<sup><b>*</b></sup> &nbsp; &nbsp;   &nbsp;  &nbsp;</span>
+      </div>
+      <%= f.input :credit,
+                  required: true,
+                  autofocus: true,
+                  label: false %>
+    </div>
+    <div class="input-group mb-1">
+      <div class="input-group-prepend">
+        <span class="input-group-text" >Semester<sup><b>*</b></sup> &nbsp;</span>
+      </div>
+    <%= f.collection_select :semester_id,
+                @semesters, :id, :name,
+                prompt: '-----Select A Semester----',
+                label: false %>
+    </div>
   </div>
-
+<br>
   <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.button :submit, class: 'btn btn-primary'%>
   </div>
 <% end %>
